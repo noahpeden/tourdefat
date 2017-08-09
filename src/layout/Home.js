@@ -1,38 +1,39 @@
 import React, { Component } from 'react'
 import { Map, DirectionsExample } from '../custom'
-import { withGoogleMap, GoogleMap, DirectionsRenderer } from 'react-google-maps'
+import { withGoogleMap, GoogleMap, DirectionsRenderer } from 'google-maps-react'
 
 const styles = {
   height: '25vh',
 }
+
+const google = window.google
 
 export default class Home extends Component {
   constructor() {
     super()
   }
   state = {
+    origin: new google.maps.LatLng(40.5907246, -105.0832341),
+    waypoints: new google.maps.LatLng(40.587395, -105.0850215),
+    directions: null,
     markers: [
       {
         position: {
-          lat: 25.0112183,
-          lng: 121.52067570000001,
+          lat: 40.58526,
+          lng: -105.084423,
         },
         key: `Taiwan`,
         defaultAnimation: 2,
       },
     ],
-    origin: new google.maps.LatLng(41.85073, -87.65126),
-    destination: new google.maps.LatLng(41.85258, -87.65141),
-    directions: null,
   }
-
   componentDidMount() {
     const DirectionsService = new google.maps.DirectionsService()
 
     DirectionsService.route(
       {
         origin: this.state.origin,
-        destination: this.state.destination,
+        waypoints: this.state.waypoints,
         travelMode: google.maps.TravelMode.DRIVING,
       },
       (result, status) => {
@@ -46,6 +47,7 @@ export default class Home extends Component {
       }
     )
   }
+
   render() {
     return (
       <div>
@@ -70,7 +72,8 @@ export default class Home extends Component {
           containerElement={<div style={styles} />}
           mapElement={<div style={styles} />}
         />
-        <DirectionsExample
+        Directions
+        <Map
           zoom={12}
           center={{
             lat: 40.58526,
@@ -78,6 +81,8 @@ export default class Home extends Component {
           }}
           containerElement={<div style={styles} />}
           mapElement={<div style={styles} />}
+          center={this.state.origin}
+          directions={this.state.directions}
         />
       </div>
     )

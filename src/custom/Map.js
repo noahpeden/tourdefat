@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import { withGoogleMap, GoogleMap, Marker, DirectionsRenderer } from 'react-google-maps'
 
 class Map extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       map: null,
     }
@@ -31,6 +31,8 @@ class Map extends Component {
           defaultZoom={this.props.zoom}
           defaultCenter={this.props.center}
         >
+          {this.props.directions &&
+            <DirectionsRenderer directions={this.props.directions} />}
           {markers.map((marker, index) => <Marker {...marker} />)}
         </GoogleMap>
       </div>
