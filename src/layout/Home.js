@@ -21,14 +21,13 @@ export default class Home extends Component {
 					width="640"
 					height="480"
 				/>
-        <br/>
 				<iframe
 					src="https://www.google.com/maps/d/u/0/embed?mid=1ZxedkP0lEY70O0U-25--y88IzSc"
-					width="440"
+					width="640"
 					height="480"
 				/>
 				<h1>Basic info about nonprofits</h1>
-				<ul>
+				<ul className="bike">
 					<h2>Bike Fort Collins advocates for and leads:</h2>
 					<li>
 						Increased participation in active transportation: NoCo Bike Show,
@@ -43,7 +42,7 @@ export default class Home extends Component {
 						Chain Reaction, KP neighborhood project
 					</li>
 				</ul>
-				<ul>
+				<ul className="overland">
 					<h2>Overland Mountain Bike Club</h2>
 					<li>
 						"Tour de Fat support enables Overland Mountain Bike Club to pursue
@@ -54,7 +53,7 @@ export default class Home extends Component {
 						contribute!"
 					</li>
 				</ul>
-				<ul>
+				<ul className="co-op">
 					<h2>Fort Collins Bycycle Co-op</h2>
 					<li>
 						The Fort Collins Bike Co-op strives to keep our community biking
@@ -65,7 +64,7 @@ export default class Home extends Component {
 						over our heads in order to serve the community
 					</li>
 				</ul>
-				<ul>
+				<ul className="youth">
 					<h2>Ciclismo Youth Foundation</h2>
 					<li>
 						The Tour de Fat enables the Ciclismo Youth Foundation to fulfill our
@@ -78,8 +77,7 @@ export default class Home extends Component {
 					</li>
 				</ul>
 
-
-        <a>Link to Donate</a>
+				<a href="#">Link to Donate</a>
 			</div>
 		);
 	}

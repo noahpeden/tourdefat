@@ -3,3 +3,25 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+ul {
+  margin: 0;
+  margin-top: -20px;
+  padding: 0;
+}
+
+.bike {
+  background-color: lightblue;
+}
+
+.overland {
+  background-color: blue;
+}
+
+.co-op {
+  background-color: cornflowerblue;
+}
+
+.youth {
+  background-color: blanchedalmond;
+}
