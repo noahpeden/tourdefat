@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
   margin: 0;
   padding: 0;
@@ -7,21 +9,53 @@ body {
 ul {
   margin: 0;
   margin-top: -20px;
-  padding: 0;
+}
+li {
+ list-style: none;
 }
 
-.bike {
-  background-color: lightblue;
+html, body {
+  background-color: lightgray;
+  font-family: 'Raleway';
 }
 
-.overland {
-  background-color: blue;
+h2 {
+  margin-top: 50px;
 }
 
-.co-op {
-  background-color: cornflowerblue;
+.map {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.youth {
-  background-color: blanchedalmond;
+img {
+  height: 80px;
+  width: 100px;
+  float: left;
+  margin-right: 30px;
+}
+
+.logo {
+  margin-left: 30%;
+  margin-right: 30%;
+  width: 500px;
+  height: 300px;
+}
+
+header {
+  width: 100%;
+}
+
+.title, h3, .donate {
+  text-align: center;
+}
+
+input {
+  margin-right: 90px;
+}
+
+h3 {
+  margin-top: 40px;
 }
