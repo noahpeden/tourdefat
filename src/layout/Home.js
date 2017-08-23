@@ -3,7 +3,7 @@ import Ciclismo from '../assets/ciclismo.jpg';
 import Coop from '../assets/coop.jpg';
 import Bike from '../assets/bike.jpg';
 import Overland from '../assets/overland.jpg';
-import Logo from '../assets/logo.png'
+import Logo from '../assets/logo.png';
 
 export default class Home extends Component {
 	render() {
@@ -13,34 +13,59 @@ export default class Home extends Component {
 		};
 		return (
 			<div>
-        <header>
-				<img className="logo" src={Logo}/>
-        </header>
+				<header>
+					<h1 className="title">Tour De Fat - Fort Collins</h1>
+				</header>
 				<h1 className="title">General Info Page</h1>
-        <div className="donate">
-          <h3>Donate to one of our amazing non-profits!</h3>
-				<form
-					action="https://www.paypal.com/cgi-bin/webscr"
-					method="post"
-					target="_top"
-				>
-					<input type="hidden" name="cmd" value="_s-xclick" />
-					<input type="hidden" name="hosted_button_id" value="CSVNKX46QWXSG" />
-					<input
-						type="image"
-						src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
-						name="submit"
-						alt="PayPal - The safer, easier way to pay online!"
-					/>
-					<img
-						alt=""
-						border="0"
-						src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
-						width="1"
-						height="1"
-					/>
-				</form>
-        </div>
+				<div className="donate">
+					<h3>
+						Do you love this event? Donate to your local cycling nonprofits NOW
+					</h3>
+					<form
+						action="https://www.paypal.com/cgi-bin/webscr"
+						method="post"
+						target="_top"
+					>
+						<input type="hidden" name="cmd" value="_s-xclick" />
+						<input
+							type="hidden"
+							name="hosted_button_id"
+							value="CSVNKX46QWXSG"
+						/>
+						<input
+							className="donate-input"
+							type="image"
+							src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+							name="submit"
+							alt="PayPal - The safer, easier way to pay online!"
+						/>
+						<img
+							alt=""
+							border="0"
+							src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif"
+							width="1"
+							height="1"
+						/>
+					</form>
+				</div>
+				<ul className="schedule">
+					<h2>Schedule of Events</h2>
+					<li>
+						10 am: Costumed Bike Parade (free!): Starting at Meldrum and Maple
+						(see map below)
+					</li>
+					<li>
+						1-3 pm: Pre-parties at local bars (no cover): Various locations in
+						Old Town. (see map below)
+					</li>
+					<li>
+						4-9 pm: Tour de Fat Concert featuring The All-American Rejects and X
+						Ambassadors ($25): New Belgium Brewery at 500 Linden Street.{' '}
+						<a href="https://www.eventbrite.com/e/the-all-american-rejects-x-ambassadors-at-fat-tire-tour-de-fat-fort-collins-tickets-32299578910">
+							Buy Tickets HERE.
+						</a>
+					</li>
+				</ul>
 				<ul className="bike">
 					<h2>Bike Fort Collins advocates for and leads:</h2>
 					<img src={Bike} alt="Bike" />
@@ -95,7 +120,10 @@ export default class Home extends Component {
 						have fun.
 					</div>
 				</ul>
-          <h3>Take a look at the maps for info on the Parade Route and where you can find the Pre-Party Bars!</h3>
+				<h3>
+					Take a look at the maps for info on the Parade Route and where you can
+					find the Pre-Party Bars!
+				</h3>
 				<div className="map">
 					<iframe
 						src="https://www.google.com/maps/d/u/0/embed?mid=18qU3uZNrfZDMEBuSRMMzNt8H9LI"
